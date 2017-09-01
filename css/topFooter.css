@@ -1,0 +1,32 @@
+@charset "utf-8";
+html,body{background-color: #f2eee6; font-size: 20px;}
+.container{width: 1000px; margin: 0 auto;}
+.top{width: 100%; height: 62px; background: url("../img/top-bg.png") no-repeat; -webkit-background-size: 100% 100%; background-size: 100% 100%;}
+.search{margin-right: 20px;}
+.search-input{width: 160px; height: 32px; margin: 15px 0; background-color: #c1b494; border-radius: 32px; position: relative;}
+.search-input input{height: 100%; line-height: 20px; width: 120px; padding-left: 14px;}
+.search-input a{position: absolute; width: 20px; height: 20px; right: 14px; top: 6px; background: url("../img/search-icon.png") no-repeat center center; -webkit-background-size: contain; background-size: contain;}
+.my-center{width: 32px; height: 32px; background: url("../img/center-icon.png") no-repeat center center; -webkit-background-size: contain; background-size: contain; margin: 15px 0 15px 17px;}
+.navs{height: 50px; background-color: #fff; padding-top: 9.5px; font-size: 14px; text-align: center; position: relative; z-index: 30; }
+.nav-lists{width: 686px; margin: 0 auto;}
+.nav-list{width: 91px; height: 29px; background: url("../img/nav-bg.png") no-repeat; -webkit-background-size: 100% 100%; background-size: 100% 100%; float: left;}
+.nav-list a{display: block; width: 100%; height: 100%; color: #fff;}
+.nav-list+.nav-list{margin-left: 8px;}
+.nav-link{line-height: 29px; text-align: center;}
+.nav-list:hover .inner-lists{height: auto;}
+.nav-list:hover .nav-link,.inner-list:hover a{color: #202468;}
+.inner-lists{height: 0; overflow: hidden;}
+.inner-list{width: 90px; height: 27px; line-height: 27px; background: url("../img/nav-inner-bg.png") no-repeat; -webkit-background-size: 100% 100%; background-size: 100% 100%; margin-top: 5px; position: relative;}
+.inner-list:before,.inner-list:after{width: 1px; height: 5px; background-color: #202468; position: absolute; content: ""; top: -5px; left: 24%;}
+.inner-list:after{right: 24%; left: auto;}
+/*==footer==*/
+.footer img{display: block; width: 100%; margin-top: 75px;}
+/*==中间==*/
+.main-left{width: 71%; position: relative;}
+.main-right{width: 27.5%;}
+.main-right>div+div{margin-top: 7px;}
+/*==注册右边==*/
+.right1-links{width: 100%; background: url("../img/right-bg.png") no-repeat; -webkit-background-size: 100% 100%; background-size: 100% 100%;padding: 2px 2px 1px;}
+.right-mall a{position: absolute; width: 26%; height: 15%; top: 7%; left: 38%;}
+.right-nav-a{position: absolute; left: 18px; top: 20px;}
+.right-nav-a a{float: left; width: 78px; height: 79px;}

@@ -1,0 +1,80 @@
+@charset "utf-8";
+.login-main{width: 100%; height: 583px; position: relative; background: url("../img/login-bg.png") no-repeat center center; -webkit-background-size: contain; background-size:contain; border: 0.1px solid transparent;}
+.login-form{width: 415px; height: 333px; background-color: rgba(255,255,255,0.48); margin: 138px auto; padding: 0 67px;}
+.login-title{font-size: 1.2rem; color: #333333; text-align: center; height: 2.25rem; line-height: 2.25rem;}
+.red-btn{background-color: #bc0d23;}
+.red-btn:hover{background-color: #cd0d23;}
+.red-btn:active{background-color: #af0d22;}
+.input-controller,.btn-controller{width: 100%; height: 33px; line-height: 33px;}
+.input-controller+.input-controller{margin-top: 31px;}
+.input-label{border: 1px solid #bdbdbd; height: 100%;  background-color: #fff; position: relative;}
+.error{position: absolute; width: 100%; text-align: center; font-size: 9px; color: #bc0d23; left: 0; top: -20px; height: 20px; line-height: 20px;}
+.input-controls{display: block; width: 100%; height: 100%; background-color: #fff; padding: 0 13px; line-height: 33px; font-size: 16px; color: #333;}
+.check-controller .input-label{width: 67%; float: left;}
+.check-controller .check-code{width: 31%; float: right; height: 100%; background-color: #bc0d23;}
+.check-code img{width: 100%; height: 100%;}
+.checkbox-label{display: block; width: 90px; margin-top: 10px; font-size: 10px; color: #333; position: relative; padding-left: 18px;cursor: pointer;}
+.checkbox-wrapper{width: 10px; height: 10px; background-color: #fff; position: absolute; left: 0; top: 50%; margin-top: -6px; }
+.checkbox-input{width: 100%; height: 100%; opacity: 0; position: absolute; left: 0; top: 0; cursor: pointer;}
+.checkbox-show{width: 100%; height: 100%;}
+.checkbox-input:checked+.checkbox-show{background: no-repeat center center;background-color: #bc0d23;  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20x%3D'0px'%20y%3D'0px'%20viewBox%3D'0%200%2012%209'%20xml%3Aspace%3D'preserve'%3E%3Cpolygon%20fill%3D'%23ffffff'%20points%3D'12%2C0.7%2011.3%2C0%203.9%2C7.4%200.7%2C4.2%200%2C4.9%203.9%2C8.8%203.9%2C8.8%203.9%2C8.8%20'%2F%3E%3C%2Fsvg%3E"); color: #595757; -webkit-background-size: 80% auto; background-size: 80% auto; }
+.btn-controller{margin-top: 22px;}
+.login-btn{display: block; color: #fff; text-align: center; font-size: 16px;}
+.login-links{height: 24px; line-height: 27px; font-size: 9px; color: #999;}
+/*==注册==*/
+.pl20{padding-left: 20px; padding-right: 20px;}
+/*.main{padding: 0 20px;}*/
+.register-title{font-size: 24px; color: #333; height: 57px; line-height: 70px; padding: 0 13px 0 40px;}
+.register-title a{float: right; font-size: 14px; color: #bc0d23;}
+.register-main{width: 100%; background: url("../img/register-bg.png") no-repeat; -webkit-background-size: 100% 100%; background-size: 100% 100%; height: 638px;}
+.re-form{width: 47%; padding-left: 17px; padding-bottom: 30px; border: 0.1px solid transparent;}
+.register .input-group{width: 100%; box-shadow: none; margin-top: 24px; position: relative;}
+.register .input-group:first-child{margin-top: 13px;}
+.register .input-label{display: block; font-size: 20px; height: 37px; line-height: 30px; color: #666666; background-color: transparent; border: none; padding-left: 11px;}
+.register .input-controls{display: block; height: 37px; line-height: 37px; background-color: transparent;  border: 1px solid #bd1228; border-radius: 5px; padding: 0 11px; -webkit-box-shadow: 1px 1px 2px #e4b3b2,1px 1px 2px #e4b3b2 inset; -moz-box-shadow: 1px 1px 2px #e4b3b2,1px 1px 2px #e4b3b2 inset; box-shadow: 1px 1px 2px #e4b3b2,1px 1px 2px #e4b3b2 inset;}
+.register .checkbox-label{margin-top: 20px; width: 100%;}
+.register .checkbox-wrapper{width: 12px; height: 12px;}
+.register .checkbox-label a{color: #006699;}
+.register .checkbox-label a:hover{text-decoration: underline;}
+.register .btn-controller{margin-top: 45px;height: 46px; line-height: 46px;}
+.register-btn{display: block;  color: #fff; text-align: center; font-size: 16px; border-radius: 5px;}
+.re-error{position: absolute; left: 104%; font-size: 12px; color: #000000; white-space: nowrap; bottom: 0; height: 37px; line-height: 37px;}
+/*==协议==*/
+.crash{position: absolute; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(0,0,0,0.15);z-index: 999; }
+.contract-content{position: fixed; width: 800px; height: 76%; background-color: #f2eee6; left: 50%; margin-left: -400px; top: 5.3%;}
+.contract-title{position: absolute; left: 0; top: 0; width: 100%; height: 56px; line-height: 56px; font-size: 24px; color: #fff; background-color: #bc0d23; padding: 0 30px;}
+.contract-close{ width: 21px; height: 100%; background: url("../img/close.png") no-repeat center center; -webkit-background-size: contain; background-size: contain;}
+.contract-btn,.next-btn{height: 49px; line-height: 49px; width: 310px; color: #fff; position: absolute; left: 50%; margin-left: -155px; border-radius: 5px; text-align: center; font-size: 20px; bottom: 25px;}
+.contract-inner{position: absolute; top: 64px; bottom: 100px; left: 44px; right: 44px; overflow-x: hidden; overflow-y: auto; padding: 0 20px 0 50px; color: #000000; font-size: 18px; line-height: 32px;scrollbar-arrow-color: #fff;  }
+/*.contract-inner::-webkit-scrollbar {-moz-appearance: none !important; background-color: transparent; }*/
+/*.contract-inner::-webkit-scrollbar-track-piece{background-color: #cccccc;}*/
+/*.contract-inner::-webkit-scrollbar-button:decrement{background:#bc0d23 url("../img/scrollUp.png") no-repeat center center; -webkit-background-size: 80% 100%; background-size: 80% 100%;}*/
+/*.contract-inner::-webkit-scrollbar-button:increment{background:#bc0d23 url("../img/scrollDown.png") no-repeat center center; -webkit-background-size: 80% 100%; background-size: 80% 100%;}*/
+/*.contract-inner::-webkit-scrollbar-thumb{background-color: #bc0d23;}*/
+.mCSB_scrollTools .mCSB_buttonUp{background-position: -48px -2px; background-color: #bc0d23; opacity: 1; filter:"alpha(opacity=100)"; -ms-filter:"alpha(opacity=100)"; height: 15px;}
+.mCSB_scrollTools .mCSB_buttonDown{background-position: -48px -22px; background-color: #bc0d23; opacity: 1; filter:"alpha(opacity=100)"; -ms-filter:"alpha(opacity=100)"; height: 15px; margin-top: -30px;}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width: 100%; border-radius: 0; background-color: #bc0d23;}
+.mCSB_scrollTools .mCSB_draggerRail{width: 100%; border-radius: 0; background-color: #ccc;}
+/*==忘记密码==*/
+.forget-check{position: fixed; width: 800px; height: 330px; background-color: #f2eee6; left: 50%; margin-left: -400px; top: 5.3%;}
+.forget-check-inner{position: absolute; top: 64px; bottom: 100px; left: 243px; right: 243px;}
+.mail-check-errow{height: 34px; line-height: 34px; color: #bc0d23; font-size: 15px;}
+.mail-check-timer{position: absolute; color: #bc0d23; font-size: 25px; left: 105%; bottom: 34px; height: 37px; line-height: 37px;}
+.re-sent{position: absolute; color: #bc0d23; font-size: 15px; left: 105%; bottom: 34px; height: 37px; line-height: 37px; white-space: nowrap;}
+.register .main-right{padding-top: 57px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

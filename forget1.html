@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>安仁</title>
+    <meta name="author" content="SIRMly">
+    <meta name="keywords" content="安仁乐道" />
+    <meta name="description" content="安仁乐道" />
+    <link rel="icon" href="" type="image/x-icon" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/topFooter.css"/>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<div class="wrapper po-re register">
+    <div class="container po-re">
+        <div class="top clearfix">
+            <div class="search pull-right clearfix">
+                <div class="search-input pull-left">
+                    <input type="text"/>
+                    <a href="javascript:;"></a>
+                </div>
+                <a href="javascript:;" class="my-center pull-left"></a>
+            </div>
+        </div>
+        <div class="pl20 clearfix">
+            <div class="main-left pull-left">
+                <P class="register-title clearfix">找回密码
+                </P>
+                <div class="register-main po-re">
+                    <div class="re-form">
+                        <div class="input-group">
+                            <label for="username" class="input-label">用户名</label>
+                            <input type="text"  class="input-controls" id="username"/>
+                            <div class="re-error">用户名应该怎么怎么样</div>
+                        </div>
+                        <div class="input-group">
+                            <label for="mail" class="input-label">邮箱</label>
+                            <input type="text"  class="input-controls" id="mail"/>
+                            <div class="re-error">邮箱不正确</div>
+                        </div>
+                        <div class="btn-controller">
+                            <a href="javascript:;" class="register-btn red-btn">发送验证码</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-right pull-right">
+                <div class="right1-links">
+                    <div class="swiper-container" id="swiper-container" style="">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/right-1.png" alt="" width="100%;"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/right-1.png" alt="" width="100%;"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/right-1.png" alt="" width="100%;"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/right-1.png" alt="" width="100%;"/>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="right-mall po-re">
+                    <img src="img/right-2.png" alt="" width="100%"/>
+                    <a href="javascript:;"></a>
+                </div>
+                <div class="right-nav po-re">
+                    <img src="img/right-nav.png" alt="" width="100%"/>
+                    <div class="right-nav-a clearfix">
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer pl20">
+            <img src="img/footer.png" alt="">
+        </div>
+    </div>
+    <div class="crash hide">
+        <div class="forget-check">
+            <p class="contract-title clearfix">填写验证码
+                <a href="javascript:;" class="pull-right contract-close"></a>
+            </p>
+            <div class="forget-check-inner">
+                <div class="input-group check-group">
+                    <label for="username" class="input-label">验证码</label>
+                    <input type="text"  class="input-controls" id="mail-check"/>
+                    <div class="mail-check-errow">验证码不正确</div>
+                    <div class="mail-check-timer">60s</div>
+                </div>
+            </div>
+            <a href="forget2.html" class="next-btn red-btn">下一步</a>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script>
+    ;
+    (function ($) {
+        /*==右边轮播图==*/
+        var swiper = new Swiper('#swiper-container', {
+            simulateTouch: false,
+            pagination: '.swiper-pagination',
+            slidesPerView: 1,
+            paginationClickable: true,
+            spaceBetween: 0,
+            loop: true,
+            autoplay: 2500,
+            autoplayDisableOnInteraction: false
+        });
+        /*==填写验证码出现==*/
+        $(".register-btn").on("click", function (){
+            getCode();
+            $(this).off("click");
+        });
+        /*==点击下一步事件==*/
+        var time = 60;
+        function getCode(){
+            $(".crash").stop().fadeIn(300, function (){
+                /*==倒计时==*/
+                var forgetTimer = setInterval(function (){
+                    time--;
+                    if(time<0){
+                        time = 0;
+                        clearInterval(forgetTimer);
+                        var resentBtn = $("<a href='javascript:;' class='re-sent'>没有收到？重新发送</a>");
+                        $(".mail-check-timer").hide();
+                        $(".forget-check-inner").on("click",resentBtn, function (){
+                            resentBtn.remove();
+                            time = 60;
+                            getCode();
+                            $(".mail-check-timer").html(time+"s").show();
+                        });
+                        resentBtn.appendTo($(".check-group"));
+                        $(".register-btn").on("click", function (){
+                            $(this).off("click");
+                            getCode();
+                        });
+                    }
+                    $(".mail-check-timer").html(time+"s");
+                },1000);
+            });
+        }
+        /*==填写验证码关闭==*/
+        $(".contract-close").on("click", function (){
+            $(".crash").stop().fadeOut(300);
+        });
+    })(jQuery);
+</script>
+</body>
+</html>
