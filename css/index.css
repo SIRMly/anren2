@@ -30,9 +30,9 @@
 .news-list-bottom li+li{margin-left: 4px;}
 .news-list-bottom li{float: left; color: #717071; font-size: 14px; height: 25px; line-height: 25px;}
 .article-share{background: url("../img/article-info2.png") no-repeat center left; -webkit-background-size: auto 440%; background-size: auto 440%; background-position: 0 24%; text-indent: 23px; line-height: 30px;}
-.article-share-way{float: left; width: 20px; height: 25px; background: url("../img/article-info2.png") no-repeat center left; -webkit-background-size: auto 450%; background-size: auto 450%; background-position: 45% 50%;}
-.article-share-way:nth-of-type(2){background-position: 45% 76%; margin-left: 0.1rem;}
-.article-share-way:nth-of-type(3){background-position: 45% 102%; margin-left: 0.1rem;}
+li.bdsharebuttonbox  a.article-share-way{float: left; width: 22px; height: 25px; background: url("../img/article-info2.png") no-repeat center left; -webkit-background-size: auto 450%; background-size: auto 450%; margin:0; background-position: 45% 50%;}
+li.bdsharebuttonbox  a.article-share-way:nth-of-type(2){background-position: 45% 76%; margin-left: 0.1rem;}
+li.bdsharebuttonbox  a.article-share-way:nth-of-type(3){background-position: 45% 102%; margin-left: 0.1rem;}
 .news-list-bottom .point-hand{float: right;color: #959595; font-size: 14px ;text-align: left; padding-right: 1.2rem; background: url("../img/article-point.png") no-repeat center right; -webkit-background-size: 45% auto; background-size: 45% auto; background-position: 25px 0; cursor: pointer;}
 .news-list-bottom .point-hand.active{background-image: url("../img/article-point-active.png");}
 .video-pic{height: 353px; overflow: hidden;}
@@ -77,6 +77,7 @@
 .maga-code:hover~.magazine-crash1{display: none;}
 .maga-slide{border: 1px solid #8a8074;}
 .index-magazine-btn{color: #202468; font-size: 18px; text-align: center; display: block; height: 28px; line-height: 28px; width: 200px; margin: 33px auto;}
+
 /*==功能==*/
 .index-links{margin: 90px auto 0; border: 0.1px solid transparent; padding-bottom: 25px;}
 .index-links-img{width: 765px; display: block; margin: 0 auto;}
@@ -87,11 +88,10 @@
 .index-links a:nth-of-type(4){left: 518px;}
 .index-links a:nth-of-type(5){left: 647px;}
 .index-links a:nth-of-type(6){left: 785px;}
+/*==联系我们==*/
 .index-connect{width: 160px; height: 163px; background: url("../img/connect-bg.png") no-repeat; -webkit-background-size: 100% 100%; background-size: 100% 100%; position: absolute; left: 755px; top: -167px; display: none;}
 .conn-code{width: 86px; height: 86px; margin: 8px auto 3px; background: url("../img/index-codebg.png") no-repeat center center; -webkit-background-size: contain; background-size: contain; padding-top: 8px;}
 .conn-code img{display: block; width: 70px; margin: 0 auto;}
 .index-connect p{font-size: 16px; text-align: center; color: #202468; font-family: "microsoft yahei", "黑体", "宋体"; font-weight: bold; margin-top: 1px;}
 .index-connect .conn-close{width: 20px; height: 20px; background: url("../img/img-del.png") no-repeat center center; -webkit-background-size: contain; background-size: contain; position: absolute; right: -8px; top: -8px; left: auto; cursor: pointer;}
 .to-top{width: 37px; height: 37px; position: fixed; display: none; background: url("../img/toTop.png") no-repeat center top; -webkit-background-size: 145% auto; background-size: 145% auto; left: 50%; margin-left: 520px; bottom: 100px;}
-/*==出现的杂志==*/
-/*html,body{overflow-y: hidden;}*/

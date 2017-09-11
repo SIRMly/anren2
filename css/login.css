@@ -81,8 +81,7 @@
 .com-info .mCSB_container{margin-right: 4px;}
 .com-info .mCustomScrollBox>.mCSB_scrollTools{width: 4px;}
 .com-info .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color: #fff;}
-.com-info .mCSB_scrollTools .mCSB_draggerRail{ background-color: #bc0d23;}
-
+.com-info .mCSB_scrollTools .mCSB_draggerRail{background-color: #bc0d23;}
 .com-crash{display: none;}
 .com-crash.succ .succe-hint{display: block;}
 .com-crash.succ .error-hint{display: none;}
@@ -92,5 +91,10 @@
 .submit-hint img{width: 65px; margin: 37px auto 13px;}
 .hint-word{font-size: 24px; color: #202468; text-align: center; height: 49px; line-height: 49px;}
 .hint-links{text-align: center; font-size: 18px; height: 25px; line-height: 25px; width: 260px; margin: 0 auto;}
-
+/*==联系我们==*/
+.index-connect{width: 160px; height: 163px; background: url("../img/connect-bg-2.png") no-repeat; -webkit-background-size: 100% 100%; background-size: 100% 100%; position: absolute; left: 50%; margin-left: -85px; top: 72px; display: none;}
+.conn-code{width: 86px; height: 86px; margin: 24px auto 3px; background: url("../img/index-codebg.png") no-repeat center center; -webkit-background-size: contain; background-size: contain; padding-top: 8px;}
+.conn-code img{display: block; width: 70px; margin: 0 auto;}
+.index-connect p{font-size: 16px; text-align: center; color: #202468; font-family: "microsoft yahei", "黑体", "宋体"; font-weight: bold; margin-top: 1px;}
+.index-connect .conn-close{width: 20px; height: 20px; background: url("../img/img-del.png") no-repeat center center; -webkit-background-size: contain; background-size: contain; position: absolute; right: -8px; top: 4px; left: auto; cursor: pointer;}
 

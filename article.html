@@ -190,7 +190,7 @@
                             下次自动登录
                         </label>
                         <a href="register.html" class="comment-register">注册</a>
-                        <a href="javascript:;" class="comment-come">发布</a>
+                        <a href="javascript:;" class="comment-come">登陆</a>
                     </div>
                 </div>
                 <div class="comment pl20">
@@ -376,11 +376,19 @@
                 <img src="img/right-nav.png" alt="" width="100%"/>
                 <div class="right-nav-a clearfix">
                     <a href="javascript:;"></a>
+                    <a href="javascript:;" class="show-connect"></a>
                     <a href="javascript:;"></a>
                     <a href="javascript:;"></a>
                     <a href="javascript:;"></a>
                     <a href="javascript:;"></a>
-                    <a href="javascript:;"></a>
+                    <div class="index-connect">
+                        <div class="conn-code">
+                            <img src="img/code.png" alt=""/>
+                        </div>
+                        <p>微信扫描二维码</p>
+                        <p>添加客服微信</p>
+                        <div class="conn-close"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -403,7 +411,7 @@
         share: [
             //此处放置分享按钮设置
             {
-                "tag": "share_1",
+                "tag": "share_1"
             }
         ]
     };
@@ -468,6 +476,13 @@
                 $(".comment").find(".comment-children").stop().slideUp(300);
                 thisComment.find(".comment-children").stop().slideDown(300).addClass("show");
             }
+        });
+        /*==显示在线客服==*/
+        $(".show-connect").on("click", function (){
+            $(".index-connect").stop().fadeIn(300);
+        });
+        $(".conn-close").on("click", function (){
+            $(".index-connect").stop().fadeOut(300);
         });
         /*==回到顶部==*/
         $(window).scroll(function (){

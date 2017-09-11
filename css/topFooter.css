@@ -60,5 +60,5 @@ html,body{background-color: #f2eee6; font-size: 20px;}
 .maga-bottom{width: 100%; border-top: 1px solid #7f7c7a; margin-top: 38px; height: 75px;}
 .maga-play-right .news-list-bottom{margin: 20px auto; width: 190px}
 .maga-play-right .article-share{height: 35px; line-height: 35px; font-size: 18px; text-indent: 32px; margin-right: 13px;}
-.maga-play-right .article-share-way{width: 30px; height: 35px; line-height: 35px;}
+.maga-play-right li.bdsharebuttonbox  a.article-share-way{width: 30px; height: 35px; line-height: 35px;}
 .copy-succ{width: 182px; height: 95px; background: url("../img/copy-succ.png")  no-repeat center center; -webkit-background-size: contain; background-size: contain; position: absolute; left: 50%; margin-left:-91px;  bottom: 190px; display: none;}

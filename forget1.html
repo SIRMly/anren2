@@ -81,11 +81,19 @@
                     <img src="img/right-nav.png" alt="" width="100%"/>
                     <div class="right-nav-a clearfix">
                         <a href="javascript:;"></a>
+                        <a href="javascript:;" class="show-connect"></a>
                         <a href="javascript:;"></a>
                         <a href="javascript:;"></a>
                         <a href="javascript:;"></a>
                         <a href="javascript:;"></a>
-                        <a href="javascript:;"></a>
+                        <div class="index-connect">
+                            <div class="conn-code">
+                                <img src="img/code.png" alt=""/>
+                            </div>
+                            <p>微信扫描二维码</p>
+                            <p>添加客服微信</p>
+                            <div class="conn-close"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -163,6 +171,13 @@
         /*==填写验证码关闭==*/
         $(".contract-close").on("click", function (){
             $(".crash").stop().fadeOut(300);
+        });
+        /*==显示在线客服==*/
+        $(".show-connect").on("click", function (){
+            $(".index-connect").stop().fadeIn(300);
+        });
+        $(".conn-close").on("click", function (){
+            $(".index-connect").stop().fadeOut(300);
         });
     })(jQuery);
 </script>

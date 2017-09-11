@@ -327,11 +327,19 @@
                 <img src="img/right-nav.png" alt="" width="100%"/>
                 <div class="right-nav-a clearfix">
                     <a href="javascript:;"></a>
+                    <a href="javascript:;" class="show-connect"></a>
                     <a href="javascript:;"></a>
                     <a href="javascript:;"></a>
                     <a href="javascript:;"></a>
                     <a href="javascript:;"></a>
-                    <a href="javascript:;"></a>
+                    <div class="index-connect">
+                        <div class="conn-code">
+                            <img src="img/code.png" alt=""/>
+                        </div>
+                        <p>微信扫描二维码</p>
+                        <p>添加客服微信</p>
+                        <div class="conn-close"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -373,16 +381,10 @@
             },{
                 tag: 'share_6',
                 bdText : '多组分享设置bdText share_6',
-                bdUrl : 'http://www.github.com/',
+                bdUrl : 'http://www.github.com/'
             }
-        ],
-        onBeforeClick:setShareConfig,
+        ]
     };
-    function setShareConfig(id,config){
-        config.bdText = text;
-        config.bdDesc = text;
-        return config;
-    }
     //以下为js加载部分
     with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
 </script>
@@ -428,6 +430,13 @@
             } else {
                 $(this).addClass("active");
             }
+        });
+        /*==显示在线客服==*/
+        $(".show-connect").on("click", function (){
+            $(".index-connect").stop().fadeIn(300);
+        });
+        $(".conn-close").on("click", function (){
+            $(".index-connect").stop().fadeOut(300);
         });
     })(jQuery);
 </script>

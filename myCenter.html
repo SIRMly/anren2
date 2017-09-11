@@ -30,12 +30,12 @@
                 <div class="myCenter-lists">
                     <ul>
                         <li class="center-icon my-icon">
-                            <a href="javascript:;">我的个人中心</a>
+                            <a href="javascript:;" class="to-myCenter">我的个人中心</a>
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <a href="javascript:;" class="to-myMmessage">我的消息</a>
+                            <a href="javascript:;" class="to-myMessage">我的消息</a>
                         </li>
                     </ul>
                     <ul>
@@ -218,7 +218,6 @@
                                             </ul>
                                         </div>
                                     </li>
-
                                     <li class="news-list clearfix">
                                         <div class="nes-pic">
                                             <img src="img/news-list-aricle.png" width="100%" />
@@ -244,6 +243,7 @@
                                                     <a href="javascript:void(0);" class="article-share-way"></a>
                                                     <a href="javascript:void(0);" class="article-share-way"></a>
                                                 </li>
+                                                <li class="point-hand">123</li>
                                             </ul>
                                         </div>
                                     </li>
@@ -272,6 +272,7 @@
                                                     <a href="javascript:void(0);" class="article-share-way"></a>
                                                     <a href="javascript:void(0);" class="article-share-way"></a>
                                                 </li>
+                                                <li class="point-hand">123</li>
                                             </ul>
                                         </div>
                                     </li>
@@ -763,11 +764,19 @@
                 <img src="img/right-nav.png" alt="" width="100%"/>
                 <div class="right-nav-a clearfix">
                     <a href="javascript:;"></a>
+                    <a href="javascript:;" class="show-connect"></a>
                     <a href="javascript:;"></a>
                     <a href="javascript:;"></a>
                     <a href="javascript:;"></a>
                     <a href="javascript:;"></a>
-                    <a href="javascript:;"></a>
+                    <div class="index-connect">
+                        <div class="conn-code">
+                            <img src="img/code.png" alt=""/>
+                        </div>
+                        <p>微信扫描二维码</p>
+                        <p>添加客服微信</p>
+                        <div class="conn-close"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -836,6 +845,10 @@
             $(".center-tab").removeClass("active");
             swiperNews.slideTo(4,500,false);
         });
+        $(".to-myCenter").on("click", function (){
+            $(".center-tab").eq(0).addClass("active").siblings().removeClass("active");
+            swiperNews.slideTo(0,500,false);    
+        });
         $(".to-myMessage").on("click", function (){
             $(".center-tab").removeClass("active");
             swiperNews.slideTo(4,500,false);
@@ -859,6 +872,13 @@
             } else {
                 $(this).addClass("active");
             }
+        });
+        /*==显示在线客服==*/
+        $(".show-connect").on("click", function (){
+            $(".index-connect").stop().fadeIn(300);
+        });
+        $(".conn-close").on("click", function (){
+            $(".index-connect").stop().fadeOut(300);
         });
     })(jQuery);
 </script>

@@ -237,11 +237,19 @@
                 <img src="img/right-nav.png" alt="" width="100%"/>
                 <div class="right-nav-a clearfix">
                     <a href="javascript:;"></a>
+                    <a href="javascript:;" class="show-connect"></a>
                     <a href="javascript:;"></a>
                     <a href="javascript:;"></a>
                     <a href="javascript:;"></a>
                     <a href="javascript:;"></a>
-                    <a href="javascript:;"></a>
+                    <div class="index-connect">
+                        <div class="conn-code">
+                            <img src="img/code.png" alt=""/>
+                        </div>
+                        <p>微信扫描二维码</p>
+                        <p>添加客服微信</p>
+                        <div class="conn-close"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -250,18 +258,6 @@
         <img src="img/footer.png" alt="">
     </div>
     <div class="to-top"></div>
-    <div class="crash enter-crash">
-        <div class="submit-hint">
-            <div class="succe-hint">
-                <img src="img/succ-icon.png" alt="">
-                <p class="hint-word">信息提交成功</p>
-                <p class="hint-links clearfix">
-                    <span class="pull-left"><i class="trans-time">5</i>秒钟后自动跳转</span>
-                    <a class="pull-left" href="myCenter.html">手动跳转</a>
-                </p>
-            </div>
-        </div>
-    </div>
 </div>
 <script src="js/jquery.min.js"></script>
 <script src="js/swiper.jquery.min.js"></script>
@@ -289,89 +285,12 @@
             autoplay: 2500,
             autoplayDisableOnInteraction: false
         });
-        /*==textarea输入变高==*/
-        var autoTextarea = function (elem, extra, maxHeight) {
-            extra = extra || 0;
-            var isFirefox = !!document.getBoxObjectFor || 'mozInnerScreenX' in window,
-                    isOpera = !!window.opera && !!window.opera.toString().indexOf('Opera'),
-                    addEvent = function (type, callback) {
-                        elem.addEventListener ?
-                                elem.addEventListener(type, callback, false) :
-                                elem.attachEvent('on' + type, callback);
-                    },
-                    getStyle = elem.currentStyle ?
-                            function (name) {
-                                var val = elem.currentStyle[name];
-                                if (name === 'height' && val.search(/px/i) !== 1) {
-                                    var rect = elem.getBoundingClientRect();
-                                    return rect.bottom - rect.top -
-                                            parseFloat(getStyle('paddingTop')) -
-                                            parseFloat(getStyle('paddingBottom')) + 'px';
-                                }
-                                ;
-                                return val;
-                            } : function (name) {
-                        return getComputedStyle(elem, null)[name];
-                    },
-                    minHeight = parseFloat(getStyle('height'));
-            elem.style.resize = 'none';
-
-            var change = function () {
-                var scrollTop, height,
-                        padding = 0,
-                        style = elem.style;
-
-                if (elem._length === elem.value.length) return;
-                elem._length = elem.value.length;
-
-                if (!isFirefox && !isOpera) {
-                    padding = parseInt(getStyle('paddingTop')) + parseInt(getStyle('paddingBottom'));
-                }
-                ;
-                scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-
-                elem.style.height = minHeight + 'px';
-                if (elem.scrollHeight > minHeight) {
-                    if (maxHeight && elem.scrollHeight > maxHeight) {
-                        height = maxHeight - padding;
-                        style.overflowY = 'auto';
-                    } else {
-                        height = elem.scrollHeight - padding;
-                        style.overflowY = 'hidden';
-                    }
-                    ;
-                    style.height = height + extra + 'px';
-                    scrollTop += parseInt(style.height) - elem.currHeight;
-                    document.body.scrollTop = scrollTop;
-                    document.documentElement.scrollTop = scrollTop;
-                    elem.currHeight = parseInt(style.height);
-                }
-                ;
-            };
-
-            addEvent('propertychange', change);
-            addEvent('input', change);
-            addEvent('focus', change);
-            change();
-        };
-        autoTextarea($("#expound-textarea")[0]);
-        /*==成功提示==*/
-        $(".enter-btn").on("click", function (){
-            /*==提交成功==*/
-            $(".enter-crash").addClass("succ").fadeIn(200, function (){
-                var time = 5;
-                var timer = setInterval(function (){
-                    time--;
-                    $(".trans-time").html(time);
-                    if(time<=0){
-                        clearInterval(timer);
-                        window.location.href = "myCenter.html";
-                    }
-                },1000)
-            });
-
-
-            /*==提交失败==*/
+        /*==显示在线客服==*/
+        $(".show-connect").on("click", function (){
+            $(".index-connect").stop().fadeIn(300);
+        });
+        $(".conn-close").on("click", function (){
+            $(".index-connect").stop().fadeOut(300);
         });
         /*==回到顶部==*/
         $(window).scroll(function (){

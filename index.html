@@ -145,10 +145,10 @@
                                     <li class="article-share">
                                         分享
                                     </li>
-                                    <li class="clearfix">
-                                        <a href="javascript:void(0);" class="article-share-way"></a>
-                                        <a href="javascript:void(0);" class="article-share-way"></a>
-                                        <a href="javascript:void(0);" class="article-share-way"></a>
+                                    <li class="clearfix bdsharebuttonbox" data-tag="share_1" >
+                                        <a href="javascript:void(0);" class="bds_tsina article-share-way" data-cmd="tsina"></a>
+                                        <a href="javascript:void(0);" class="bds_weixin article-share-way" data-cmd="weixin"></a>
+                                        <a href="javascript:void(0);" class="bds_tqq article-share-way" data-cmd="sqq"></a>
                                     </li>
                                     <li class="point-hand">123</li>
                                 </ul>
@@ -171,10 +171,10 @@
                                     <li class="article-share">
                                         分享
                                     </li>
-                                    <li class="clearfix">
-                                        <a href="javascript:void(0);" class="article-share-way"></a>
-                                        <a href="javascript:void(0);" class="article-share-way"></a>
-                                        <a href="javascript:void(0);" class="article-share-way"></a>
+                                    <li class="clearfix bdsharebuttonbox" data-tag="share_2" >
+                                        <a href="javascript:void(0);" class="bds_tsina article-share-way" data-cmd="tsina"></a>
+                                        <a href="javascript:void(0);" class="bds_weixin article-share-way" data-cmd="weixin"></a>
+                                        <a href="javascript:void(0);" class="bds_tqq article-share-way" data-cmd="sqq"></a>
                                     </li>
                                     <li class="point-hand">123</li>
                                 </ul>
@@ -244,10 +244,10 @@
                                     <li class="article-share">
                                         分享
                                     </li>
-                                    <li class="clearfix">
-                                        <a href="javascript:void(0);" class="article-share-way"></a>
-                                        <a href="javascript:void(0);" class="article-share-way"></a>
-                                        <a href="javascript:void(0);" class="article-share-way"></a>
+                                    <li class="clearfix bdsharebuttonbox" data-tag="share_3" >
+                                        <a href="javascript:void(0);" class="bds_tsina article-share-way" data-cmd="tsina"></a>
+                                        <a href="javascript:void(0);" class="bds_weixin article-share-way" data-cmd="weixin"></a>
+                                        <a href="javascript:void(0);" class="bds_tqq article-share-way" data-cmd="sqq"></a>
                                     </li>
                                     <li class="point-hand">123</li>
                                 </ul>
@@ -269,10 +269,10 @@
                                     <li class="article-share">
                                         分享
                                     </li>
-                                    <li class="clearfix">
-                                        <a href="javascript:void(0);" class="article-share-way"></a>
-                                        <a href="javascript:void(0);" class="article-share-way"></a>
-                                        <a href="javascript:void(0);" class="article-share-way"></a>
+                                    <li class="clearfix bdsharebuttonbox" data-tag="share_4" >
+                                        <a href="javascript:void(0);" class="bds_tsina article-share-way" data-cmd="tsina"></a>
+                                        <a href="javascript:void(0);" class="bds_weixin article-share-way" data-cmd="weixin"></a>
+                                        <a href="javascript:void(0);" class="bds_tqq article-share-way" data-cmd="sqq"></a>
                                     </li>
                                     <li class="point-hand">123</li>
                                 </ul>
@@ -294,10 +294,10 @@
                                     <li class="article-share">
                                         分享
                                     </li>
-                                    <li class="clearfix">
-                                        <a href="javascript:void(0);" class="article-share-way"></a>
-                                        <a href="javascript:void(0);" class="article-share-way"></a>
-                                        <a href="javascript:void(0);" class="article-share-way"></a>
+                                    <li class="clearfix bdsharebuttonbox" data-tag="share_5" >
+                                        <a href="javascript:void(0);" class="bds_tsina article-share-way" data-cmd="tsina"></a>
+                                        <a href="javascript:void(0);" class="bds_weixin article-share-way" data-cmd="weixin"></a>
+                                        <a href="javascript:void(0);" class="bds_tqq article-share-way" data-cmd="sqq"></a>
                                     </li>
                                     <li class="point-hand">123</li>
                                 </ul>
@@ -475,10 +475,10 @@
                             <li class="article-share">
                                 分享
                             </li>
-                            <li class="clearfix">
-                                <a href="javascript:void(0);" class="article-share-way"></a>
-                                <a href="javascript:void(0);" class="article-share-way"></a>
-                                <a href="javascript:void(0);" class="article-share-way"></a>
+                            <li class="clearfix bdsharebuttonbox" data-tag="share_6" >
+                                <a href="javascript:void(0);" class="bds_tsina article-share-way" data-cmd="tsina"></a>
+                                <a href="javascript:void(0);" class="bds_weixin article-share-way" data-cmd="weixin"></a>
+                                <a href="javascript:void(0);" class="bds_tqq article-share-way" data-cmd="sqq"></a>
                             </li>
                         </ul>
                     </div>
@@ -490,6 +490,44 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/swiper.jquery.min.js"></script>
 <script src="js/clipboard.min.js"></script>
+<script>
+    var _bd_share_config = {
+        //此处添加分享具体设置
+        common : {
+            bdText : '默认文本',
+            bdUrl : 'http://www.baidu.com/',
+        },
+        share: [
+            {
+                tag: 'share_1', //这个设置与上面div的data-tag标签的值一致
+                bdText : '多组分享设置bdText share_1',
+                bdUrl : 'http://www.baidu.com/',
+            },{
+                tag: 'share_2',
+                bdText : '多组分享设置bdText share_2222',
+                bdUrl : 'http://www.github.com/'
+            },{
+                tag: 'share_3',
+                bdText : '多组分享设置bdText share_3333',
+                bdUrl : 'http://www.baidu.com/'
+            },{
+                tag: 'share_4',
+                bdText : '多组分享设置bdText share_4',
+                bdUrl : 'http://www.github.com/'
+            },{
+                tag: 'share_5',
+                bdText : '多组分享设置bdText share_55',
+                bdUrl : 'http://www.baidu.com/'
+            },{
+                tag: 'share_6',
+                bdText : '多组分享设置bdText share_6',
+                bdUrl : 'http://www.github.com/'
+            }
+        ],
+    };
+    //以下为js加载部分
+    with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
 <script>
     ;(function ($){
         var swiper = new Swiper('#swiper-container',{

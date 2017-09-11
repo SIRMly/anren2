@@ -238,11 +238,19 @@
                 <img src="img/right-nav.png" alt="" width="100%"/>
                 <div class="right-nav-a clearfix">
                     <a href="javascript:;"></a>
+                    <a href="javascript:;" class="show-connect"></a>
                     <a href="javascript:;"></a>
                     <a href="javascript:;"></a>
                     <a href="javascript:;"></a>
                     <a href="javascript:;"></a>
-                    <a href="javascript:;"></a>
+                    <div class="index-connect">
+                        <div class="conn-code">
+                            <img src="img/code.png" alt=""/>
+                        </div>
+                        <p>微信扫描二维码</p>
+                        <p>添加客服微信</p>
+                        <div class="conn-close"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -260,6 +268,10 @@
                     <span class="pull-left"><i class="trans-time">5</i>秒钟后自动跳转</span>
                     <a class="pull-left" href="myCenter.html">手动跳转</a>
                 </p>
+            </div>
+            <div class="error-hint">
+                <img src="img/error-icon.png" alt="">
+                <p class="hint-word">信息提交失败</p>
             </div>
         </div>
     </div>
@@ -359,20 +371,32 @@
         /*==成功提示==*/
         $(".enter-btn").on("click", function (){
             /*==提交成功==*/
-            $(".enter-crash").addClass("succ").fadeIn(200, function (){
-                var time = 5;
-                var timer = setInterval(function (){
-                    time--;
-                    $(".trans-time").html(time);
-                    if(time<=0){
-                        clearInterval(timer);
-                        window.location.href = "myCenter.html";
-                    }
-                },1000)
-            });
-
-
+//            $(".enter-crash").addClass("succ").fadeIn(200, function (){
+//                var time = 5;
+//                var timer = setInterval(function (){
+//                    time--;
+//                    $(".trans-time").html(time);
+//                    if(time<=0){
+//                        clearInterval(timer);
+//                        window.location.href = "myCenter.html";
+//                    }
+//                },1000)
+//            });
             /*==提交失败==*/
+            $(".enter-crash").addClass("sub-error").fadeIn(200, function (){
+                setTimeout(function (){
+                    $(".enter-crash").fadeOut(200, function (){
+                        $(this).removeClass("sub-error");
+                    });
+                },2000);
+            });
+        });
+        /*==显示在线客服==*/
+        $(".show-connect").on("click", function (){
+            $(".index-connect").stop().fadeIn(300);
+        });
+        $(".conn-close").on("click", function (){
+            $(".index-connect").stop().fadeOut(300);
         });
         /*==回到顶部==*/
         $(window).scroll(function (){
