@@ -37,9 +37,9 @@
 .article-down{background: url("../img/article-info2.png") no-repeat center left; -webkit-background-size: auto 440%; background-size: auto 440%; background-position: 0 2px; text-indent: 23px; }
 .article-down a{display: block; width: 100%; height: 100%; color: #717071;}
 .article-share{background: url("../img/article-info2.png") no-repeat center left; -webkit-background-size: auto 440%; background-size: auto 440%; background-position: 0 24%; text-indent: 23px; line-height: 30px;}
-.article-share-way{float: left; width: 22px; height: 25px; background: url("../img/article-info2.png") no-repeat center left; -webkit-background-size: auto 450%; background-size: auto 450%; background-position: 45% 50%;}
-.article-share-way:nth-of-type(2){background-position: 45% 76%; margin-left: 0.1rem;}
-.article-share-way:nth-of-type(3){background-position: 45% 102%; margin-left: 0.1rem;}
+li.bdsharebuttonbox  a.article-share-way{float: left; width: 22px; height: 25px; background: url("../img/article-info2.png") no-repeat center left; -webkit-background-size: auto 450%; background-size: auto 450%; margin:0; background-position: 45% 50%;}
+li.bdsharebuttonbox  a.article-share-way:nth-of-type(2){background-position: 45% 76%; margin-left: 0.1rem;}
+li.bdsharebuttonbox  a.article-share-way:nth-of-type(3){background-position: 45% 102%; margin-left: 0.1rem;}
 .news-list-bottom .point-hand{float: right;color: #959595; font-size: 14px ;text-align: left; padding-right: 1.2rem; background: url("../img/article-point.png") no-repeat center right; -webkit-background-size: 45% auto; background-size: 45% auto; background-position: 25px 0; cursor: pointer;}
 .news-list-bottom .point-hand.active{background-image: url("../img/article-point-active.png");}
 /*==分页==*/
@@ -312,14 +312,6 @@ video::-webkit-media-controls { display:none !important; }
 .suggestion .enter-btn{margin-top: 100px;}
 .up-error{width: 25px; height: 25px; background: url("../img/img-del.png") no-repeat; -webkit-background-size: 100% 100%; background-size: 100% 100%; position: absolute; top: -10px; right: -10px; cursor: pointer;}
 /*==个人中心==*/
-.myCenter-lists{position: absolute; right: 0; top: 62px; background-color: #f3efe7; z-index: 555; width: 230px; border: 1px solid #ccc9c2; border-top-width: 0; -webkit-box-shadow: 1px 2px 3px #ddd9d2; -moz-box-shadow: 1px 2px 3px #ddd9d2; box-shadow: 1px 2px 3px #ddd9d2; display: none;}
-.myCenter-lists ul{padding: 8px 0;}
-.myCenter-lists ul+ul{border-top: 1px solid #000;}
-.myCenter-lists a{display: block; width: 100%; height: 37px; line-height: 37px; font-size: 21px; color: #000; padding-left: 56px;}
-.center-icon{background: url("../img/mycenter-icon.png") no-repeat; -webkit-background-size: 24px auto; background-size: 24px auto;}
-.center-icon.my-icon{background-position:  22px 5px;}
-.center-icon.my-setting{background-position:  22px -38px;}
-.center-icon.my-signout{background-position:  22px -81px;}
 .center-top{ background-color: #fff; margin-top: 107px; padding-left: 10px; padding-right: 10px; }
 .center-top-inner{position: relative; border-bottom: 1px solid #dbdbdb;}
 .center-left{width: 70%;}
@@ -381,15 +373,16 @@ video::-webkit-media-controls { display:none !important; }
 /*==我的消息==*/
 .myCenter .left-title{height: 44px; line-height: 24px;}
 .my-mess-lists{padding: 12px 5px 0 40px;}
-.my-mess-lists li{margin-top: 28px;}
+.my-mess-lists li{margin-top: 28px; position: relative;}
+.my-mess-lists li.noRead:before{position: absolute; content: ""; width: 10px; height: 10px; -webkit-border-radius:50%; -moz-border-radius:50%; border-radius:50%; background-color: #cf0012; left: -20px; top: 16px;}
 .mess-link{font-size: 21px; color: #202468;font-family: "microsoft yahei", "黑体", "宋体"; display: block; background-color: #e4e4e4; padding: 5px; line-height: 32px; font-weight: bold;}
 .my-mess-fun{height: 31px; line-height: 31px;}
 .mess-time{float: left; margin-left: 5px; color: #717071; font-size: 14px;}
 .mess-del{float: right; color: #717071; font-size: 14px; background: url("../img/reply-icon.png") no-repeat; -webkit-background-size: 18px auto; background-size: 18px auto; background-position: 0 -48px; text-indent: 23px; cursor: pointer;}
 .mess-content{padding-top: 20px;}
 .mess-word{padding: 40px 60px; font-size: 18px; color: #000; text-indent: 36px; line-height: 32px;}
-
-
+/*==微信分享==*/
+/*.bd_weixin_popup{padding: 10px 5px !important;}*/
 
 
 

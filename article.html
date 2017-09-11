@@ -139,10 +139,10 @@
                         <li class="article-share">
                             分享
                         </li>
-                        <li class="clearfix">
-                            <a href="javascript:void(0);" class="article-share-way"></a>
-                            <a href="javascript:void(0);" class="article-share-way"></a>
-                            <a href="javascript:void(0);" class="article-share-way"></a>
+                        <li class="clearfix bdsharebuttonbox" data-tag="share_1">
+                            <a href="javascript:void(0);" class="bds_tsina article-share-way" data-cmd="tsina"></a>
+                            <a href="javascript:void(0);" class="bds_weixin article-share-way" data-cmd="weixin"></a>
+                            <a href="javascript:void(0);" class="bds_tqq article-share-way" data-cmd="sqq"></a>
                         </li>
                         <li class="point-hand">123</li>
                     </ul>
@@ -393,6 +393,24 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/swiper.jquery.min.js"></script>
 <script>
+    window._bd_share_config = {
+        //此处添加分享具体设置
+        common : {
+            //此处放置通用设置
+            bdText : '分享的内容',
+            bdUrl : 'http://github.com'
+        },
+        share: [
+            //此处放置分享按钮设置
+            {
+                "tag": "share_1",
+            }
+        ]
+    };
+    //以下为js加载部分
+    with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+<script>
     ;(function ($){
         /*==上部swiper==*/
         var swiperTop = new Swiper('#top-swiper',{
@@ -453,7 +471,6 @@
         });
         /*==回到顶部==*/
         $(window).scroll(function (){
-            console.log($(window).scrollTop());
             if($(window).scrollTop()>=$(window).outerHeight()){
                 $(".to-top").fadeIn(200);
             }else{
