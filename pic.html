@@ -28,7 +28,11 @@
                     <input type="text"/>
                     <a href="javascript:;"></a>
                 </div>
-                <a href="javascript:;" class="my-center pull-left"></a>
+                <div class="my-center-box pull-left">
+                    <a href="javascript:;" class="my-center">
+                        <img src="img/center-icon.png" alt=""/>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="navs">
@@ -581,14 +585,18 @@
         });
         galleryTop.params.control = galleryThumbs;
         galleryThumbs.params.control = galleryTop;
-        /*==弹出层==*/
-        var swiperOut = new Swiper('.swiper-inner', {
-            nextButton: '.swiper-button-next-out',
-            prevButton: '.swiper-button-prev-out',
-            spaceBetween: 0,
-        });
         $(".gallery-top").find(".pic-slider-img").on("click", function (){
             $(".crash").show();
+            /*==弹出层==*/
+            var swiperOut = new Swiper('.swiper-inner', {
+                spaceBetween: 0,
+                centeredSlides: true,
+                slidesPerView: 'auto',
+                touchRatio: 0.2,
+                slideToClickedSlide: true,
+                nextButton: '.swiper-button-next-out',
+                prevButton: '.swiper-button-prev-out'
+            });
         });
         $(".swiper-close").on("click", function (){
             $(".crash").hide();

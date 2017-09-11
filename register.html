@@ -25,7 +25,11 @@
                     <input type="text"/>
                     <a href="javascript:;"></a>
                 </div>
-                <a href="javascript:;" class="my-center pull-left"></a>
+                <div class="my-center-box pull-left">
+                    <a href="javascript:;" class="my-center">
+                        <img src="img/center-icon.png" alt=""/>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="pl20 clearfix">
@@ -60,6 +64,16 @@
                             <input type="text"  class="input-controls" id="mail"/>
                             <div class="re-error">邮箱不正确</div>
                         </div>
+                        <div class="input-group clearfix">
+                            <label for="mail" class="input-label">验证码</label>
+                            <div class="input-item">
+                                <input type="text"  class="input-controls" id=""/>
+                                <div class="check-code">
+                                    <img src="img/check-code.png" alt="">
+                                </div>
+                            </div>
+                            <div class="re-error">验证码不正确</div>
+                        </div>
                         <label class="checkbox-label">
                             <div class="checkbox-wrapper">
                                 <input type="checkbox" class="checkbox-input"/>
@@ -68,7 +82,7 @@
                             同意<a href="javaScript:;" class="re-contract">《安仁乐道网站用户使用协议》</a>
                         </label>
                         <div class="btn-controller">
-                            <a href="javascript:;" class="register-btn red-btn">立即注册</a>
+                            <a href="register-done.html" class="register-btn red-btn">立即注册</a>
                         </div>
                     </div>
                 </div>
@@ -157,7 +171,7 @@
         });
         /*==同意并继续==*/
         $(".contract-btn").on("click", function (){
-            $(".checkbox-input").attr("checked","checked");
+            $(".checkbox-input").attr("checked","checked").prop("checked","checked");
             $(".crash").stop().fadeOut(300);
         });
         /*==协议出现==*/

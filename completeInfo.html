@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>安仁</title>
+    <meta name="author" content="SIRMly">
+    <meta name="keywords" content="安仁乐道" />
+    <meta name="description" content="安仁乐道" />
+    <link rel="icon" href="" type="image/x-icon" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="css/topFooter.css"/>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<div class="wrapper po-re">
+    <div class="container po-re register com-info">
+        <div class="top clearfix">
+            <div class="search pull-right clearfix">
+                <div class="search-input pull-left">
+                    <input type="text"/>
+                    <a href="javascript:;"></a>
+                </div>
+                <div class="my-center-box pull-left">
+                    <a href="javascript:;" class="my-center">
+                        <img src="img/center-icon.png" alt=""/>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="pl20 clearfix">
+            <div class="main-left pull-left">
+                <P class="register-title clearfix">完善信息
+                </P>
+                <div class="register-main po-re">
+                    <div class="re-form">
+                        <div class="input-group">
+                            <label for="name" class="input-label">真实姓名</label>
+                            <input type="text" class="input-controls" id="name"/>
+                            <div class="re-error">姓名应该怎么怎么样</div>
+                        </div>
+                        <div class="input-group">
+                            <label for="idcard" class="input-label">身份证号码</label>
+                            <input type="text" class="input-controls" id="idcard"/>
+                            <div class="re-error">身份证号码格式不正确</div>
+                        </div>
+                        <div class="input-group">
+                            <label for="year" class="input-label">出生日期</label>
+                            <div class="birth clearfix">
+                                <div class="birthday-item sel-box">
+                                    <input type="text" class="input-controls select-input" id="year" readonly/>
+                                    <div class="birth-select-wrapper">
+                                        <ul class="birth-select">
+                                            <li>1990</li>
+                                            <li>1991</li>
+                                            <li>1992</li>
+                                            <li>1993</li>
+                                            <li>1994</li>
+                                            <li>1995</li>
+                                            <li>1996</li>
+                                            <li>1997</li>
+                                            <li>1998</li>
+                                            <li>1999</li>
+                                            <li>2000</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="birthday-item sel-box">
+                                    <input type="text" class="input-controls select-input" id="month" readonly/>
+                                    <div class="birth-select-wrapper">
+                                        <ul class="birth-select">
+                                            <li>1月</li>
+                                            <li>2月</li>
+                                            <li>3月</li>
+                                            <li>4月</li>
+                                            <li>5月</li>
+                                            <li>6月</li>
+                                            <li>7月</li>
+                                            <li>8月</li>
+                                            <li>9月</li>
+                                            <li>10月</li>
+                                            <li>11月</li>
+                                            <li>12月</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="birthday-item sel-box">
+                                    <input type="text" class="input-controls select-input" id="day" readonly/>
+                                    <div class="birth-select-wrapper">
+                                        <ul class="birth-select">
+                                            <li>01</li>
+                                            <li>02</li>
+                                            <li>03</li>
+                                            <li>04</li>
+                                            <li>05</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="re-error">请选择出生日期</div>
+                        </div>
+                        <div class="input-group">
+                            <label for="sex" class="input-label">性别</label>
+                            <div class="sex-item sel-box">
+                                <input type="text"  class="input-controls select-input" id="sex" readonly/>
+                                <div class="birth-select-wrapper">
+                                    <ul class="birth-select">
+                                        <li>男</li>
+                                        <li>女</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="re-error">请选择您的性别</div>
+                        </div>
+                        <div class="input-group">
+                            <label for="province" class="input-label">籍贯</label>
+                            <div class="birth clearfix">
+                                <div class="address-item sel-box">
+                                    <input type="text" class="input-controls select-input" id="province" readonly/>
+                                    <div class="birth-select-wrapper">
+                                        <ul class="birth-select">
+                                            <li>陕西省</li>
+                                            <li>陕西省</li>
+                                            <li>陕西省</li>
+                                            <li>陕西省</li>
+                                            <li>陕西省</li>
+                                            <li>陕西省</li>
+                                            <li>陕西省</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="address-item sel-box">
+                                    <input type="text" class="input-controls select-input" id="city" readonly/>
+                                    <div class="birth-select-wrapper">
+                                        <ul class="birth-select">
+                                            <li>西安市</li>
+                                            <li>西安市</li>
+                                            <li>西安市</li>
+                                            <li>西安市</li>
+                                            <li>西安市</li>
+                                            <li>西安市</li>
+                                            <li>西安市</li>
+                                            <li>西安市</li>
+                                            <li>西安市</li>
+                                            <li>西安市</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="re-error">请选择您的籍贯</div>
+                        </div>
+                        <div class="input-group">
+                            <label for="tel" class="input-label">手机号</label>
+                            <input type="text"  class="input-controls" id="tel"/>
+                            <div class="re-error">手机号格式不正确</div>
+                        </div>
+                        <div class="btn-controller">
+                            <a href="javascript:;" class="register-btn red-btn">保存</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-right pull-right">
+                <div class="right1-links">
+                    <div class="swiper-container" id="swiper-container" style="">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/right-1.png" alt="" width="100%;"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/right-1.png" alt="" width="100%;"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/right-1.png" alt="" width="100%;"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/right-1.png" alt="" width="100%;"/>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="right-mall po-re">
+                    <img src="img/right-2.png" alt="" width="100%"/>
+                    <a href="javascript:;"></a>
+                </div>
+                <div class="right-nav po-re">
+                    <img src="img/right-nav.png" alt="" width="100%"/>
+                    <div class="right-nav-a clearfix">
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer pl20">
+            <img src="img/footer.png" alt="">
+        </div>
+    </div>
+    <div class="crash com-crash">
+        <div class="submit-hint">
+            <div class="succe-hint">
+                <img src="img/succ-icon.png" alt="">
+                <p class="hint-word">保存成功</p>
+            </div>
+            <div class="error-hint">
+                <img src="img/error-icon.png" alt="">
+                <p class="hint-word">保存失败</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/swiper.jquery.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+    ;
+    (function ($) {
+        var swiper = new Swiper('#swiper-container', {
+            simulateTouch: false,
+            pagination: '.swiper-pagination',
+            slidesPerView: 1,
+            paginationClickable: true,
+            spaceBetween: 0,
+            loop: true,
+            autoplay: 2500,
+            autoplayDisableOnInteraction: false
+        });
+        /*==滚动条==*/
+        $(".birth-select-wrapper").mCustomScrollbar({
+            scrollButtons:{
+                enable:true
+            }
+        });
+        /*==select==*/
+        $(".select-input").on("focus", function(){
+            var nowInput = $(this);
+            nowInput.next(".birth-select-wrapper").slideDown(200, function (){
+                $(this).mCustomScrollbar("update");
+            });
+            nowInput.next(".birth-select-wrapper").on("click", "li", function (e) {
+                var inputValue = $.trim($(this).text());
+                nowInput.val(inputValue);
+                nowInput.next(".birth-select-wrapper").stop().slideUp(200);
+                nowInput.next(".birth-select-wrapper").off("click", "li");
+            });
+        }).on("blur", function (){
+            var nowInput = $(this);
+            setTimeout(function (){
+                nowInput.next(".birth-select-wrapper").stop().slideUp(100);
+            },100)
+        });
+
+        /*==提交提示==*/
+        $(".register-btn").on("click", function (){
+            /*==提交成功==*/
+            $(".com-crash").addClass("succ").fadeIn(200, function (){
+                var time = 3;
+                var timer = setInterval(function (){
+                    time--;
+                    if(time<=0){
+                        clearInterval(timer);
+                        $(".com-crash").fadeOut(200, function(){
+                            $(".com-crash").removeClass("succ");
+                        });
+                        window.location.href = "myCenter.html";
+                    }
+                },1000)
+            });
+            /*==提交失败==*/
+//            $(".com-crash").addClass("sub-error").fadeIn(200, function (){
+//                var time = 2;
+//                var timer = setInterval(function (){
+//                    time--;
+//                    if(time<=0){
+//                        clearInterval(timer);
+//                        $(".com-crash").fadeOut(200, function(){
+//                            $(".com-crash").removeClass("sub-error")
+//                        });
+//                    }
+//                },1000)
+//            });
+        });
+    })(jQuery);
+</script>
+</body>
+</html>

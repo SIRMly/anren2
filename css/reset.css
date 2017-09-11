@@ -18,7 +18,7 @@ a, button, input, select, textarea { -webkit-tap-highlight-color: rgba(255, 255,
 input::-webkit-inner-spin-button, input::-webkit-outer-spin-button { -webkit-appearance: none !important;  margin: 0  ;}
 button, input[type=submit], input[type=reset], input[type=button], input[type=file] { -webkit-appearance: none;}
 input[type=number] { -moz-appearance: textfield;  }
-.clearfix:after, .clearfix:before {  content: "";  display: block;  height: 0;  clear: both;  visibility: hidden;}
+.clearfix:after, .clearfix:before {content: "";  display: block;  height: 0;  clear: both;  visibility: hidden;}
 .pull-left { float: left;}
 .pull-right { float: right;}
 .hide{display: none; }
